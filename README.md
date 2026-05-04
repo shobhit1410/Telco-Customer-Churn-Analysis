@@ -26,12 +26,26 @@ business questions a retention or CRM analyst would face.
 | # | Business Question |
 |---|---|
 | 1 | Which contract type and payment method has the highest churn rate? |
+<img width="561" height="350" alt="Query 1" src="https://github.com/user-attachments/assets/bce4078c-fb1c-4c03-8029-eaff6b45d67d" />
+
 | 2 | Which internet service type puts the most monthly revenue at risk? |
+<img width="745" height="181" alt="Query 2" src="https://github.com/user-attachments/assets/2030fce9-6536-41c3-a589-5995a4e104a4" />
+
 | 3 | Are high-value customers churning more or less than low-value ones? |
+<img width="789" height="236" alt="Query 3" src="https://github.com/user-attachments/assets/66976652-5fb5-4c02-924c-cb5cd142cf72" />
+
 | 4 | Which currently active customers are at highest risk of churning? |
+<img width="792" height="817" alt="Query 4" src="https://github.com/user-attachments/assets/25fb8e1d-42b0-4e82-b242-1790bdf73e91" />
+
 | 5 | Do customers with more add-on services churn less? |
+<img width="1096" height="281" alt="Query 5" src="https://github.com/user-attachments/assets/8eb4b25d-8099-4db2-a245-a38bcba584ac" />
+
 | 6 | At which stage of the customer lifecycle is churn the highest? |
+<img width="795" height="240" alt="Query 6" src="https://github.com/user-attachments/assets/2d9b14ae-c100-4060-b32e-ab467bfbace8" />
+
 | 7 | What does the overall business health look like at a glance? |
+<img width="479" height="263" alt="Query 7" src="https://github.com/user-attachments/assets/6036e319-32b5-4436-acfb-a3ee29311714" />
+
 
 ---
 
