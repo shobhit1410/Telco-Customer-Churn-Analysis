@@ -64,16 +64,24 @@ business questions a retention or CRM analyst would face.
 ---
 
 ## Key Findings
-- Month-to-month contract customers churn at ~43% vs only 
-  ~11% for two-year contracts
-- Fiber optic internet service has the highest monthly revenue 
-  at risk despite being the premium tier
-- Customers in their first 12 months have the highest churn 
-  rate — early retention is critical
-- Senior citizens churn at a disproportionately higher rate 
-  compared to their share of the customer base
-- Customers with no add-on services (security, backup, 
-  support) churn significantly more
+
+- Month-to-month contract customers churn at ~43% vs only ~3% for two-year
+  contracts — contract length is the strongest churn predictor
+- Fiber optic internet service has the highest monthly revenue at risk
+  ($114,300 / 40.35%) despite being the premium tier
+- Lowest-value customers (Q4) churn at 43.46% vs only 14.51% for
+  highest-value customers (Q1) — churn risk is strongly inversely
+  correlated with customer value
+- Customers in their first 12 months have the highest churn rate (47.44%)
+  — dropping steadily to 6.61% for 60+ month customers — early retention
+  is critical
+- Senior citizens churn at 41.68% vs the overall churn rate of 26.54%,
+  representing a disproportionately high-risk segment
+- Fiber optic customers have significantly lower add-on adoption
+  (e.g. only 27.1% use online security) compared to DSL customers
+  (48.7%), while also churning at nearly double the rate (41.9% vs 19%)
+- Overall business health: 1,869 of 7,043 customers churned (26.54%
+  churn rate), with $139,131 in monthly revenue currently at risk
 
 
  
