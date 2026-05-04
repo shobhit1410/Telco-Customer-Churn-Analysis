@@ -1,4 +1,4 @@
---Query 1 — Churn Rate by Contract Type & Payment Method
+--Query 1 â€” Churn Rate by Contract Type & Payment Method
 
 SELECT
     Contract,
@@ -11,7 +11,7 @@ FROM churn
 GROUP BY ROLLUP(Contract, PaymentMethod)
 ORDER BY Contract, churn_rate_pct DESC;
 
---Query 2 — Revenue at Risk by Internet Service Type
+--Query 2 â€” Revenue at Risk by Internet Service Type
 WITH revenue_summary AS (
     SELECT
         InternetService,
@@ -34,7 +34,7 @@ FROM revenue_summary
 GROUP BY InternetService
 ORDER BY pct_revenue_at_risk DESC;
 
---Query 3 — Customer Lifetime Value vs Churn
+--Query 3 â€” Customer Lifetime Value vs Churn
 WITH ltv_bands AS (
     SELECT
         customerID,
@@ -49,10 +49,10 @@ WITH ltv_bands AS (
 )
 SELECT
     CASE ltv_quartile
-        WHEN 1 THEN 'Q1 — Highest Value'
-        WHEN 2 THEN 'Q2 — Upper Mid'
-        WHEN 3 THEN 'Q3 — Lower Mid'
-        WHEN 4 THEN 'Q4 — Lowest Value'
+        WHEN 1 THEN 'Q1 â€” Highest Value'
+        WHEN 2 THEN 'Q2 â€” Upper Mid'
+        WHEN 3 THEN 'Q3 â€” Lower Mid'
+        WHEN 4 THEN 'Q4 â€” Lowest Value'
     END AS customer_segment,
     COUNT(*)AS total_customers,
     SUM(CASE WHEN Churn = 1 THEN 1 ELSE 0 END)AS churned,
@@ -64,7 +64,7 @@ FROM ltv_bands
 GROUP BY ltv_quartile
 ORDER BY ltv_quartile;
 
---Query 4 — Composite Churn Risk Score
+--Query 4 â€” Composite Churn Risk Score
 
 WITH risk_scoring AS (
     SELECT
@@ -99,7 +99,7 @@ FROM ranked
 WHERE risk_rank <= 15
 ORDER BY risk_rank;
 
---Query 5 — Add-on Service Adoption vs Churn
+--Query 5 â€” Add-on Service Adoption vs Churn
 
 SELECT
     InternetService,
@@ -116,16 +116,16 @@ WHERE InternetService != 'No'
 GROUP BY InternetService
 ORDER BY churn_rate_pct DESC;
 
---Query 6 — Tenure Cohort Retention with Running Average
+--Query 6 â€” Tenure Cohort Retention with Running Average
 WITH cohorts AS (
     SELECT
         CASE
-            WHEN tenure BETWEEN 0  AND 12 THEN '01 — 0-12 Months'
-            WHEN tenure BETWEEN 13 AND 24 THEN '02 — 13-24 Months'
-            WHEN tenure BETWEEN 25 AND 36 THEN '03 — 25-36 Months'
-            WHEN tenure BETWEEN 37 AND 48 THEN '04 — 37-48 Months'
-            WHEN tenure BETWEEN 49 AND 60 THEN '05 — 49-60 Months'
-            ELSE                               '06 — 60+ Months'
+            WHEN tenure BETWEEN 0  AND 12 THEN '01 â€” 0-12 Months'
+            WHEN tenure BETWEEN 13 AND 24 THEN '02 â€” 13-24 Months'
+            WHEN tenure BETWEEN 25 AND 36 THEN '03 â€” 25-36 Months'
+            WHEN tenure BETWEEN 37 AND 48 THEN '04 â€” 37-48 Months'
+            WHEN tenure BETWEEN 49 AND 60 THEN '05 â€” 49-60 Months'
+            ELSE                               '06 â€” 60+ Months'
         END AS tenure_cohort,
         Churn
     FROM churn
@@ -153,7 +153,7 @@ SELECT
 FROM cohort_stats
 ORDER BY tenure_cohort;
 
---Query 7 — Executive KPI Summary
+--Query 7 â€” Executive KPI Summary
 SELECT 'Total Customers'                          AS metric,
         CAST(COUNT(*) AS NVARCHAR)                AS value
 FROM churn
